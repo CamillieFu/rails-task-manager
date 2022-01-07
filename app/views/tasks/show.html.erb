@@ -1,0 +1,11 @@
+<div class="container">
+  <h2><%= @task.title %></h2>
+  <p>task details: <%= @task.details %></p>
+  <p>completion status: <%= @task.completed ? '✅' : '⏳' %></p>
+
+  <%= link_to "Update Task",
+    edit_task_path(@task),
+    method: :patch %>
+
+  <%= link_to "View All Tasks", tasks_path %>
+</div>

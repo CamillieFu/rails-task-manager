@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Task List</h1>
+  <ul class="list-unstyled">
+    <% @tasks.each do |task| %>
+      <div class="d-flex flex-wrap">
+        <li><%= link_to task.title, task_path(task) %></li>
+          <%# confirm not functional  %>
+        <li><%= link_to '🗑', task_path(task), method: :delete, data: { confirm: "Delete?" } %></li>
+      </div>
+    <% end %>
+  </ul>
+  <br>
+  <%= link_to 'Add a new task', new_task_path %>
+</div>
