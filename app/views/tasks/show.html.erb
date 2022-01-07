@@ -1,10 +1,11 @@
 <div class="container">
-  <h2><%= @task.title %></h2>
-  <p>task details: <%= @task.details %></p>
-  <p>completion status: <%= @task.completed ? '✅' : '⏳' %></p>
+  <div class="col-12 col-lg-6 border rounded p-5 my-3">
+    <h2><%= @task.title %></h2>
+    <p>task details: <%= @task.details %></p>
+    <p>completion status: <%= @task.completed ? '✅' : '⏳' %></p>
 
-  <%= link_to "Update Task",
-    edit_task_path(@task) %>
-
+    <%= link_to "Update Task",
+      edit_task_path(@task) %>
+  </div>
   <%= link_to "View All Tasks", tasks_path %>
 </div>

@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="col-12 col-lg-6 border p-3 task">
+  <div class="col-12 col-lg-6 border rounded p-5 task">
     <h1 class="text-center">Task List</h1>
     <ul class="list-unstyled">
       <% @tasks.each do |task| %>
-        <div class="d-flex flex-wrap border-bottom p-1">
-          <li><%= link_to task.title, task_path(task) %></li>
+        <div class="d-flex flex-wrap border-bottom p-2">
+          <li class="link"><%= link_to task.title, task_path(task) %></li>
             <%# confirm not functional  %>
-          <li class="ml-auto"><%= link_to '🗑', task_path(task), method: :delete, data: { confirm: "Delete?" } %></li>
+          <li class="ml-auto delete"><%= link_to '🗑', task_path(task), method: :delete, data: { confirm: "Delete?" } %></li>
         </div>
       <% end %>
     </ul>

@@ -13,3 +13,33 @@ ul {
 .add-task-link {
   font-size: 1.3rem;
 }
+
+a {
+  font-size: 1.3rem;
+}
+
+ .link > a {
+   color: black;
+ }
+
+ .link > a:hover {
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: 0.3s;
+ }
+
+ a:hover {
+   text-decoration: none;
+ }
+
+ .delete:hover {
+    background-color: rgba(211, 209, 209, 0.68);
+    padding: 4px;
+    border-radius: 8px;
+ }
+
+ p {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    margin-top: 16px;
+ }
