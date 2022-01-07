@@ -4,8 +4,7 @@
   <p>completion status: <%= @task.completed ? '✅' : '⏳' %></p>
 
   <%= link_to "Update Task",
-    edit_task_path(@task),
-    method: :patch %>
+    edit_task_path(@task) %>
 
   <%= link_to "View All Tasks", tasks_path %>
 </div>

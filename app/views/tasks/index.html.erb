@@ -1,14 +1,18 @@
 <div class="container">
-  <h1>Task List</h1>
-  <ul class="list-unstyled">
-    <% @tasks.each do |task| %>
-      <div class="d-flex flex-wrap">
-        <li><%= link_to task.title, task_path(task) %></li>
-          <%# confirm not functional  %>
-        <li><%= link_to '🗑', task_path(task), method: :delete, data: { confirm: "Delete?" } %></li>
-      </div>
-    <% end %>
-  </ul>
+  <div class="col-12 col-lg-6 border p-3 task">
+    <h1 class="text-center">Task List</h1>
+    <ul class="list-unstyled">
+      <% @tasks.each do |task| %>
+        <div class="d-flex flex-wrap border-bottom p-1">
+          <li><%= link_to task.title, task_path(task) %></li>
+            <%# confirm not functional  %>
+          <li class="ml-auto"><%= link_to '🗑', task_path(task), method: :delete, data: { confirm: "Delete?" } %></li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
   <br>
-  <%= link_to 'Add a new task', new_task_path %>
+  <div class="add-task-link">
+    <%= link_to 'Add a new task', new_task_path %>
+  </div>
 </div>
